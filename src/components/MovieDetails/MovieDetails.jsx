@@ -7,6 +7,8 @@ import {
   AdditionalInfoList,
   AdditionalInfoListItem,
   DetailsWrapper,
+  H2,
+  H3,
   InfoItem,
   InfoList,
   MovieDetailsButton,
@@ -25,11 +27,11 @@ export default function MovieDetails() {
           <span>user score</span>
           <InfoList>
             <InfoItem>
-              <h3>Overview</h3>
+              <H3>Overview</H3>
               <p>Overview details</p>
             </InfoItem>
             <InfoItem>
-              <h3>Genres</h3>
+              <H3>Genres</H3>
               <p>drama xyima</p>
             </InfoItem>
           </InfoList>
@@ -37,7 +39,7 @@ export default function MovieDetails() {
         </DetailsWrapper>
       </MovieDetailsContainer>
       <AdditionalInfoContainer>
-        <h2>Additional information</h2>
+        <H2>Additional information</H2>
         <AdditionalInfoList>
           <AdditionalInfoListItem>
             <AdditionalInfoLink to="cast">Cast</AdditionalInfoLink>

@@ -23,6 +23,14 @@ export const MovieDetailsTitle = styled.h1`
   font-size: 1.5rem;
   margin: 0.5rem 0;
 `;
+export const H3 = styled.h2`
+  margin-top: 10px;
+  font-size: 1.1rem;
+`;
+export const H2 = styled.h2`
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+`;
 
 export const MovieDetailsButton = styled.button`
   background-color: #6ec6ff;
@@ -40,6 +48,7 @@ export const MovieDetailsButton = styled.button`
 export const InfoItem = styled.li`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const InfoList = styled.ul`
