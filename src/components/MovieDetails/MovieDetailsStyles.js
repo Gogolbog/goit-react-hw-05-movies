@@ -37,8 +37,15 @@ export const MovieDetailsButton = styled.button`
     color: #6ec6ff;
   }
 `;
+export const InfoItem = styled.li`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const InfoList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
