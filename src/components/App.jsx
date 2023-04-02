@@ -3,7 +3,7 @@ import Movies from 'pages/Movies';
 import { Route, Routes } from 'react-router-dom';
 import MovieDetails from './MovieDetails/MovieDetails';
 import Reviews from './Reviews';
-import Cast from './Cast';
+import Cast from './Cast/Cast';
 import Layout from './Layout/Layout';
 
 export default function App() {

@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MovieAPI from 'services/Api';
+import { HomeWrapper, UL } from './HomeStyled';
 
 const api = new MovieAPI();
 
@@ -13,9 +14,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <HomeWrapper>
       <h1>Trending today</h1>
-      <ul>
+      <UL>
         {movies.map(movie => (
           <li key={movie.id}>
             <Link state={{ from: location }} to={`/movies/${movie.id}`}>
@@ -23,7 +24,7 @@ export default function Home() {
             </Link>
           </li>
         ))}
-      </ul>
-    </div>
+      </UL>
+    </HomeWrapper>
   );
 }
