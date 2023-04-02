@@ -1,25 +1,28 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import MovieAPI from 'services/Api';
+
+const api = new MovieAPI();
 
 export default function Home() {
+  const [movies, setMovies] = useState([]);
+  const location = useLocation();
+
+  useEffect(() => {
+    api.getTrendingMovies().then(data => setMovies(data.results));
+  }, []);
+
   return (
     <div>
       <h1>Trending today</h1>
       <ul>
-        <li>
-          <Link key={1} to={'/movies/:55555'}>
-            movie1
-          </Link>
-        </li>
-        <li>
-          <Link key={2} to={'/movies/:66666'}>
-            movie2
-          </Link>
-        </li>
-        <li>
-          <Link key={3} to={'/movies/:77777'}>
-            movie3
-          </Link>
-        </li>
+        {movies.map(movie => (
+          <li key={movie.id}>
+            <Link state={{ from: location }} to={`/movies/${movie.id}`}>
+              {movie.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

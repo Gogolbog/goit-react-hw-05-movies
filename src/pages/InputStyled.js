@@ -35,7 +35,8 @@ export const Button = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0e5f8b;
+    background-color: #6ec6ff;
+    color: yellow;
   }
 
   &:focus {
