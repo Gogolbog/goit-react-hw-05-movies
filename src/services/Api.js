@@ -36,4 +36,15 @@ export default class MovieAPI {
       console.error(error);
     }
   }
+
+  async getMovieReviews(movieId) {
+    try {
+      const response = await axios.get(
+        `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US`
+      );
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }

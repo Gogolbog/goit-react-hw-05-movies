@@ -11,11 +11,11 @@ export default function Cast() {
   const arr = casts.cast ?? [];
 
   useEffect(() => {
-    async function fetchMovieDetails() {
+    async function fetchMovieCast() {
       const data = await castsApi.getMovieCredits(movieId);
       setCasts(data);
     }
-    fetchMovieDetails();
+    fetchMovieCast();
   }, [movieId]);
 
   return (
