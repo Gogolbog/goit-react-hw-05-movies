@@ -33,7 +33,7 @@ export default function Cast() {
                   : `http://www.suryalaya.org/images/no_image.jpg`
               }
               loading="lazy"
-              alt={`${actor.name}'s profile picture`}
+              alt={`${actor.name}'s profile`}
             />
           </li>
         ))}
