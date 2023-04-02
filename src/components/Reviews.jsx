@@ -23,12 +23,14 @@ export default function Reviews() {
     <div>
       <p>Reviews:</p>
       <ul>
-        {arr.map(author => (
-          <li key={author.id}>
-            <h4>{author.author}</h4>
-            <p>{author.content}</p>
-          </li>
-        ))}
+        {arr.length
+          ? arr.map(review => (
+              <li key={review.id}>
+                <h4>{review.author}</h4>
+                <p>{review.content}</p>
+              </li>
+            ))
+          : 'We don`t have any reviews for this movie.'}
       </ul>
     </div>
   );
