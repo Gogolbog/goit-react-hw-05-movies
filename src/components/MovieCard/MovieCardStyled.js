@@ -34,7 +34,7 @@ export const InfoItem = styled.li`
 `;
 
 export const InfoList = styled.ul`
-  margin-top: 20px;
+  margin-top: 19px;
 `;
 export const H3 = styled.h2`
   margin-top: 10px;
