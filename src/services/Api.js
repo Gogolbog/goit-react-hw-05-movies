@@ -15,6 +15,17 @@ export default class MovieAPI {
     }
   }
 
+  async getMovies(query) {
+    try {
+      const response = await axios.get(
+        `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
+      );
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   async getMovieDetails(movieId) {
     try {
       const response = await axios.get(

@@ -1,5 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Main, Nav, NavLinkStyled } from './LayoutStyled';
+import React, { Suspense } from 'react';
+import { TailSpin as Loader } from 'react-loader-spinner';
 
 export default function Layout() {
   return (
@@ -9,7 +11,13 @@ export default function Layout() {
         <NavLinkStyled to="/movies">Movies</NavLinkStyled>
       </Nav>
       <Main>
-        <Outlet />
+        <Suspense
+          fallback={
+            <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
+          }
+        >
+          <Outlet />
+        </Suspense>
       </Main>
     </>
   );
