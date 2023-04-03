@@ -3,7 +3,7 @@ import { Button, Form, Input, Label } from './InputStyled';
 // import { useState } from 'react';
 
 export default function Movies() {
-  // const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const getMovieId = searchParams.get('movieId') ?? '';
@@ -13,6 +13,7 @@ export default function Movies() {
     value === '' ? setSearchParams({}) : setSearchParams({ movieId: value });
   };
 
+  console.log(getMovieId);
   return (
     <Form>
       <Label htmlFor="movieId">Пошук фільмів:</Label>
